@@ -182,7 +182,12 @@ describe('Application launch', () => {
       true,
       true,
     )) as Page;
-    const dialog = await mainWindow.waitForEvent('dialog');
+    const dialogPromise = new Promise<Dialog>((resolve) => {
+      mainWindow.on('dialog', (dialog) => {
+        resolve(dialog);
+      });
+    });
+    const dialog = await dialogPromise;
     await dialog.dismiss();
     expect(dialog.message()).toBe(alertMsg);
   });
