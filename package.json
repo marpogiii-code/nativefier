@@ -129,6 +129,10 @@
     ],
     "testRegex": "test\\.js",
     "testTimeout": 15000,
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest",
+      "^.+\\.jsx?$": "babel-jest"
+    },
     "transformIgnorePatterns": [
       "node_modules/.*",
       "!node_modules/yargs/.*"
