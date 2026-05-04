@@ -73,10 +73,9 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.29.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.28.6",
-    "@babel/preset-env": "^7.29.3",
-    "@babel/preset-typescript": "^7.28.5",
+    "@babel/core": "^7.22.20",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-typescript": "^7.22.20",
     "@types/debug": "^4.1.13",
     "@types/fs-extra": "^11.0.4",
     "@types/hasbin": "^1.2.2",
