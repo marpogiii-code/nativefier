@@ -70,7 +70,7 @@
     "sanitize-filename": "^1.6.4",
     "source-map-support": "^0.5.21",
     "tmp": "^0.2.5",
-    "yargs": "^18.0.0"
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
@@ -108,6 +108,7 @@
     "watchPathIgnorePatterns": "See https://jestjs.io/docs/configuration#watchpathignorepatterns-arraystring . We set it for `jest --watch` (a.k.a. `npm run test:watch`) to trigger only after `tsc --watch` (a.k.a. `npm run build:watch`) completes its incremental compilation. Else, jest will pick up immediately on changes in `src` when TSC is barely running, hence testing not-recompiled-yet code and being super confusing, as 1. your changes won't be taken during this first run, and 2. the *next* run (e.g. after a second 'Save' in your editor) will actually have the new code :D"
   },
   "jest": {
+    "preset": "ts-jest",
     "collectCoverage": true,
     "collectCoverageFrom": [
       "./app/dist/**/*.js",
@@ -134,13 +135,8 @@
     ],
     "testRegex": "test\\.js",
     "testTimeout": 15000,
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest",
-      "^.+\\.jsx?$": "babel-jest"
-    },
     "transformIgnorePatterns": [
-      "node_modules/.*",
-      "!node_modules/yargs/.*"
+      "node_modules/(?!yargs)"
     ],
     "watchPathIgnorePatterns": [
       "<rootDir>/app/lib.*",
