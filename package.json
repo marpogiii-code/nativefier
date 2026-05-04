@@ -128,6 +128,9 @@
     ],
     "testRegex": "test\\.js",
     "testTimeout": 15000,
+    "transformIgnorePatterns": [
+      "node_modules/(?!(yargs)/)"
+    ],
     "watchPathIgnorePatterns": [
       "<rootDir>/app/lib.*",
       "<rootDir>/app/src.*",
