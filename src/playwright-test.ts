@@ -183,7 +183,7 @@ describe('Application launch', () => {
       true,
       true,
     )) as Page;
-    const [dialogPromise] = (await once(
+    const [dialogPromise] = (await events.once(
       mainWindow,
       'dialog',
     )) as unknown as Promise<Dialog>[];
