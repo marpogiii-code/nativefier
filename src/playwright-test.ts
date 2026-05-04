@@ -1,4 +1,5 @@
 import { once } from 'events';
+const events = { once };
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -183,7 +184,7 @@ describe('Application launch', () => {
       true,
       true,
     )) as Page;
-    const [dialogPromise] = (await events.once(
+    const [dialogPromise] = (await once(
       mainWindow,
       'dialog',
     )) as unknown as Promise<Dialog>[];

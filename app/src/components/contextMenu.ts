@@ -3,7 +3,7 @@ import {
   ContextMenuParams,
   Event as ElectronEvent,
 } from 'electron';
-import contextMenu from 'electron-context-menu';
+import contextMenu, { Actions } from 'electron-context-menu';
 
 import { nativeTabsSupported, openExternal } from '../helpers/helpers';
 import * as log from '../helpers/loggingHelper';
