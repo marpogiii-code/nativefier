@@ -120,12 +120,12 @@ function getInfoPListOptions(
     (newOptions.darwinDarkModeSupport =
       newOptions.darwinDarkModeSupport === undefined
         ? undefined
-        : newOptions.darwinDarkModeSupport === false),
+        : newOptions.darwinDarkModeSupport === false,
       log.debug(
         `Extracted app version from Info.plist: ${
           newOptions.appVersion as string
         }`,
-      );
+      ));
   }
 
   if (newOptions.darwinDarkModeSupport === undefined) {
